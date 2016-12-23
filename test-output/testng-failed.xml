@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" parallel="tests">
+  <parameter name="browser" value="chrome"/>
+  <test name="ChromeTest(failed)" parallel="tests">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="TestCases.loginTestCases">
+        <methods>
+          <include name="login"/>
+          <include name="blankUser"/>
+          <include name="blankPwd"/>
+          <include name="beforeClass"/>
+          <include name="blankUserPwd"/>
+        </methods>
+      </class> <!-- TestCases.loginTestCases -->
+    </classes>
+  </test> <!-- ChromeTest(failed) -->
+</suite> <!-- Failed suite [Suite] -->

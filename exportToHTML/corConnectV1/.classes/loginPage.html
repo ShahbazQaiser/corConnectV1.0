@@ -1,0 +1,191 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="htmlId">
+<head>
+  <title>Coverage Report :: loginPage</title>
+  <style type="text/css">
+    @import "../../.css/coverage.css";
+  </style>
+</head>
+
+<body>
+<div class="header"></div>
+
+<div class="content">
+<div class="breadCrumbs">
+    [ <a href="../../index.html">all classes</a> ]
+    [ <a href="../index.html">corConnectV1</a> ]
+</div>
+
+<h1>Coverage Summary for Class: loginPage (corConnectV1)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Class, %
+</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">loginPage</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/ 1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/ 9)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/ 18)
+  </span>
+</td>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<div class="sourceCode"><i>1</i>&nbsp;package corConnectV1;
+<i>2</i>&nbsp;
+<i>3</i>&nbsp;/**
+<i>4</i>&nbsp; * Created by shahbaz on 12/8/2016.
+<i>5</i>&nbsp; */
+<i>6</i>&nbsp;
+<i>7</i>&nbsp;import static org.testng.AssertJUnit.assertTrue;
+<i>8</i>&nbsp;import org.apache.xmlbeans.impl.xb.xsdschema.Public;
+<i>9</i>&nbsp;import org.openqa.selenium.By;
+<i>10</i>&nbsp;import org.openqa.selenium.WebDriver;
+<i>11</i>&nbsp;import org.openqa.selenium.WebElement;
+<i>12</i>&nbsp;import org.openqa.selenium.support.FindBy;
+<i>13</i>&nbsp;import org.openqa.selenium.support.PageFactory;
+<i>14</i>&nbsp;import static org.testng.AssertJUnit.assertTrue;
+<i>15</i>&nbsp;import java.util.List;
+<i>16</i>&nbsp;import org.openqa.selenium.Keys;
+<i>17</i>&nbsp;import org.openqa.selenium.support.ui.LoadableComponent;
+<i>18</i>&nbsp;
+<i>19</i>&nbsp;public class loginPage extends LoadableComponent&lt;loginPage&gt;
+<i>20</i>&nbsp;{
+<i>21</i>&nbsp;    private WebDriver driver;
+<b class="nc"><i>22</i>&nbsp;    private String title=&quot;corconnect-qa.corcentric.com | Login&quot;;</b>
+<i>23</i>&nbsp;
+<i>24</i>&nbsp;    @FindBy(id=&quot;txtuserID_I&quot;)
+<i>25</i>&nbsp;    public WebElement loginIdField;
+<i>26</i>&nbsp;
+<i>27</i>&nbsp;    @FindBy(id=&quot;txtPassword_I&quot;)
+<i>28</i>&nbsp;    public WebElement loginPwdField;
+<i>29</i>&nbsp;
+<i>30</i>&nbsp;    @FindBy (id=&quot;btnSubmit_CD&quot;)
+<i>31</i>&nbsp;    public WebElement loginButton;
+<i>32</i>&nbsp;
+<i>33</i>&nbsp;    @FindBy(id=&quot;txtuserID_ETC&quot;)
+<i>34</i>&nbsp;    public WebElement userIdValidateMsg;
+<i>35</i>&nbsp;
+<i>36</i>&nbsp;    @FindBy(id=&quot;txtPassword_ETC&quot;)
+<i>37</i>&nbsp;    public WebElement passwordValidateMsg;
+<i>38</i>&nbsp;
+<i>39</i>&nbsp;    @FindBy(id=&quot;lblMessageLogin&quot;)
+<i>40</i>&nbsp;    public WebElement logoutValidateMsg;
+<i>41</i>&nbsp;
+<i>42</i>&nbsp;    /*  @FindBy(xpath =&quot;//label[@for=&#39;id&#39;]&quot;)
+<i>43</i>&nbsp;      public WebElement IdValidateMsg;
+<i>44</i>&nbsp;
+<i>45</i>&nbsp;      @FindBy (xpath =&quot;//div[contains(.,&#39;You have successfully logged out&#39;)][@class=&#39;alert alert-success fade in&#39;]&quot;)
+<i>46</i>&nbsp;      public WebElement logoutValidation;
+<i>47</i>&nbsp;
+<i>48</i>&nbsp;      @FindBy(id=&quot;user_remember_me&quot;)
+<i>49</i>&nbsp;      public WebElement loginRememberCheck;*/
+<i>50</i>&nbsp;
+<b class="nc"><i>51</i>&nbsp;    public static  String userIdValMsgText=&quot;User ID is required&quot;;</b>
+<i>52</i>&nbsp;
+<i>53</i>&nbsp;    public String getUserIdValMsg()
+<i>54</i>&nbsp;
+<i>55</i>&nbsp;    {
+<b class="nc"><i>56</i>&nbsp;        return userIdValidateMsg.getText();</b>
+<i>57</i>&nbsp;    }
+<b class="nc"><i>58</i>&nbsp;    public static  String pwdValMsgText=&quot;Password is required&quot;;</b>
+<i>59</i>&nbsp;
+<i>60</i>&nbsp;    public String getPwdValMsg()
+<i>61</i>&nbsp;
+<i>62</i>&nbsp;    {
+<b class="nc"><i>63</i>&nbsp;        return passwordValidateMsg.getText();</b>
+<i>64</i>&nbsp;    }
+<i>65</i>&nbsp;
+<b class="nc"><i>66</i>&nbsp;    public static  String logoutValMsgText=&quot;Logged out successfully.&quot;;</b>
+<i>67</i>&nbsp;
+<i>68</i>&nbsp;    public String getlogoutValMsgText()
+<i>69</i>&nbsp;
+<i>70</i>&nbsp;    {
+<b class="nc"><i>71</i>&nbsp;        return logoutValidateMsg.getText();</b>
+<i>72</i>&nbsp;    }
+<i>73</i>&nbsp;
+<i>74</i>&nbsp;
+<i>75</i>&nbsp;    // id =&#39;lblMessageLogin&#39;
+<i>76</i>&nbsp;    // text =&#39;Logged out successfully.&#39;
+<i>77</i>&nbsp;
+<i>78</i>&nbsp;    public loginPage(WebDriver driver)
+<b class="nc"><i>79</i>&nbsp;    {</b>
+<b class="nc"><i>80</i>&nbsp;        this.driver=driver;</b>
+<b class="nc"><i>81</i>&nbsp;        PageFactory.initElements(driver, this);</b>
+<i>82</i>&nbsp;    }
+<i>83</i>&nbsp;    public void loginActivity(String userId, String password)
+<i>84</i>&nbsp;    {
+<b class="nc"><i>85</i>&nbsp;        loginIdField.clear();</b>
+<b class="nc"><i>86</i>&nbsp;        loginPwdField.clear();</b>
+<b class="nc"><i>87</i>&nbsp;        loginIdField.sendKeys(userId);</b>
+<b class="nc"><i>88</i>&nbsp;        loginPwdField.sendKeys(password);</b>
+<b class="nc"><i>89</i>&nbsp;        loginButton.click();</b>
+<i>90</i>&nbsp;    }
+<i>91</i>&nbsp;
+<i>92</i>&nbsp;    public void clickLoginBtn()
+<i>93</i>&nbsp;    {
+<b class="nc"><i>94</i>&nbsp;        loginButton.click();</b>
+<i>95</i>&nbsp;    }
+<i>96</i>&nbsp;    @Override
+<i>97</i>&nbsp;    protected void isLoaded() throws Error
+<i>98</i>&nbsp;    {
+<b class="nc"><i>99</i>&nbsp;        assertTrue(driver.getTitle().equals(title));</b>
+<i>100</i>&nbsp;    }
+<i>101</i>&nbsp;
+<i>102</i>&nbsp;    @Override
+<i>103</i>&nbsp;    protected void load()
+<i>104</i>&nbsp;    {
+<b class="nc"><i>105</i>&nbsp;        driver.get(&quot;https://corconnect-qa.corcentric.com/&quot;);</b>
+<i>106</i>&nbsp;    }
+<i>107</i>&nbsp;
+<i>108</i>&nbsp;}
+</div>
+</div>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2016-12-14 17:43</div>
+</div>
+</body>
+</html>

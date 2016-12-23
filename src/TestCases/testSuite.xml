@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+    <suite name="Suite" parallel="tests">
+    <!-- FIREFOX TEST  -->
+       <!-- <test name="FirefoxTest">
+        <parameter name="browser" value="firefox" />
+        <classes>
+        <class name="TestCases.loginTestCases">
+    <methods>
+       <include name="blankPwd" />
+        <include name="blankUser"/>
+        <include name="blankUserPwd"/>
+        <include name="login"/>
+    </methods>
+        </class>
+        </classes>
+        </test>-->
+    <!-- CHROME TEST  -->
+     <test name="ChromeTest">
+    <parameter name="browser" value="chrome" />
+    <classes>
+    <class name="TestCases.loginTestCases" >
+        <methods>
+            <include name="blankPwd"/>
+           <!-- <include name="blankUser"/>
+            <include name="blankUserPwd"/>
+            <include name="login"/>-->
+        </methods>
+    </class>
+    </classes>
+    </test>
+   <!--  IE TEST-->
+<!--        <test name="login">
+        <parameter name="browser" value="ie" />
+        <classes>
+            <class name="TestCases.loginTestCases" >
+                <methods>
+                    <include name="blankPwd"/>
+                    <include name="blankUser"/>
+                    <include name="blankUserPwd"/>
+                    <include name="login"/>
+                </methods>
+            </class>
+        </classes>
+    </test>-->
+    </suite>
